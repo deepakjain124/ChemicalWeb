@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+/* CarouselComponent.css */
+body{
+  font-family: 'Chakra Petch', sans-serif;
+}
+.carousel-wrapper {
+  overflow: hidden; /* Hide any overflow to prevent scrollbar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel .slide img {
+  max-width: 100%;
+  max-height: calc(100vh - 200px); /* Adjust the maximum image height */
+  margin: 0 auto; /* Center the images horizontally */
+}
+::-webkit-scrollbar {
+  width: 0px;
+  height: 5px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c8ced4;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.ant-spin {
+  height: 100vh !important;
+  display: flex !important;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.ant-spin .ant-spin-dot .ant-spin-dot-item {
+  background-color: green;
+}
+.ant-dropdown-menu {
+  background-color: #ffffff !important;
+  border-radius: 0px !important;
+}
+.ant-float-btn-body {
+  background-color: #e84022 !important;
+}
+.ant-float-btn-icon {
+  color: white !important;
+}
+/* .contact-us-header {
+  background-image: url("./Assets//contact.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px); 
+  margin: 0 auto; 
+} */
+.content-div {
+  background-image: url("https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.content-div:hover {
+  background-image: linear-gradient(
+      to right,
+      #e84022,
+      hsla(28, 68%, 70%, 0.801)
+    ),
+    url("https://images.unsplash.com/photo-1522093007474-d86e9bf7ba6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80");
 }
 
-.App-link {
-  color: #61dafb;
+.image-cover {
+  height: 260px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*
+  -remove the classes below if you have the 'group-hover'property added in your tailwind config file
+  -also remove the class from the html template
+  */
+.content-div:hover .fd-cl {
+  opacity: 0.25;
+}
+.content-div:hover .fd-sh {
+  opacity: 1;
 }
