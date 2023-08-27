@@ -24,7 +24,7 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c8ced4;
+  background: transparent;
   border-radius: 5px;
 }
 
@@ -32,6 +32,7 @@ body{
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 .ant-spin {
   height: 100vh !important;
   display: flex !important;
@@ -46,7 +47,7 @@ body{
   border-radius: 0px !important;
 }
 .ant-float-btn-body {
-  background-color: #e84022 !important;
+  background-color: green !important;
 }
 .ant-float-btn-icon {
   color: white !important;
@@ -87,4 +88,8 @@ body{
 }
 .content-div:hover .fd-sh {
   opacity: 1;
+}
+.ant-table-thead tr th{
+  background-color: #2a887ddb !important;
+  color: #ffffff !important;
 }

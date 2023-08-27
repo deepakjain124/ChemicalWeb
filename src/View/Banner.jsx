@@ -1,10 +1,10 @@
 import React from 'react'
 import { images } from '../Assets'
 
-const Banner = ({name="",image=images.dolomite}) => {
+const Banner = ({name="",image=images.bannerbg}) => {
   return (
-    <div className="contact-us-header bg-cover bg-no-repeat max-w-full h-[calc(100vh-500px)] md:h-[calc(100vh-200px)]  flex justify-center  items-center  " style={{backgroundImage:`url(${image})`}}>
-    <p className="text-primary text-xl md:text-5xl m-4  border-b-2 border-primary bg-transparent p-10 shadow-lg shadow-gray-400">
+    <div className="contact-us-header mt-20 bg-cover bg-no-repeat max-w-full h-[calc(100vh-390px)] md:h-[calc(100vh-200px)]  flex justify-center  items-center  " style={{backgroundImage:`url(${image})`,backgroundSize:"cover"}}>
+    <p className="text-yellow-500 text-xl md:text-5xl m-4  border-b-4 rounded-md border-yellow-300 bg-transparent p-10 shadow-lg shadow-gray-400">
       {name}
     </p>
   </div>
@@ -12,12 +12,3 @@ const Banner = ({name="",image=images.dolomite}) => {
 }
 
 export default Banner
-// .contact-us-header {
-//   background-image: url("./Assets//contact.jpg");
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   max-width: 100%;
-//   height: calc(100vh - 200px);
-//   max-height: calc(100vh - 200px); /* Adjust the maximum image height */
-//   margin: 0 auto; /* Center the images horizontally */
-// }

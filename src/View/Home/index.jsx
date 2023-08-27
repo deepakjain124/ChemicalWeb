@@ -1,6 +1,7 @@
 import React from 'react'
 import Carousal from './Carousal'
 import OurProduct from './OurProduct'
+import Footer from '../Footer/Footer'
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
    <Carousal/>
    <OurProduct/>
    </div>
+   <Footer/>
    </>
   )
 }

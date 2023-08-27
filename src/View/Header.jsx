@@ -4,6 +4,8 @@ import {
   MenuFoldOutlined,
   CaretDownFilled,
 } from "@ant-design/icons";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { FiPhoneCall } from "react-icons/fi";
 import { Dropdown } from "antd";
 import { useNavigate } from "react-router-dom";
 import { ProductList } from "./ProductList";
@@ -83,9 +85,18 @@ const Header = () => {
       ),
     };
   });
+  const phoneNumber = "+91 92143 48850"; // Replace with the actual phone number
+  const message = "Hello, I'm reaching out from your website!"; // Replace with your message
+
+  const handleWhatsAppClick = () => {
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
   return (
     <>
-      <div className="header p-3 cursor-pointer  h-16 flex justify-around items-center bg-primary">
+      <div className="header p-3 fixed w-full z-10 cursor-pointer  h-16 flex justify-around text-white items-center bg-primary">
         <div>
           {toggleMenu ? (
             <MenuFoldOutlined
@@ -110,10 +121,21 @@ const Header = () => {
             <NavbarItem setTpggleMenu={setTpggleMenu} />
           </ul>
         )}
-        <div onClick={() => navigate("/")} className="logoImage md:inline ">
-         2Microns
+        <div
+          onClick={() => navigate("/")}
+          className="logoImage flex justify-start gap-4 items-center "
+        >
+          <p>2Microns</p>{" "}
+          <IoLogoWhatsapp
+            onClick={handleWhatsAppClick}
+            className="text-green-500 animate-pulse cursor-pointer text-xl"
+          />
+          <p>Call Now</p>
+          <a href={`tel:${phoneNumber}`}>
+            <FiPhoneCall className="text-green-500 animate-pulse cursor-pointer text-xl" />
+          </a>
         </div>
-        <div className=" text-sm font-semibold cursor-pointer md:inline hidden  items-center gap-2">
+        <div className=" text-[12px] hover:text-yellow-300 font-semibold cursor-pointer md:inline hidden  items-center gap-2">
           <Dropdown
             menu={{ items }}
             trigger={["click"]}
@@ -131,13 +153,13 @@ const Header = () => {
             </p>
           </Dropdown>
         </div>
-        <div className="Dateandtime text-sm font-semibold lg:inline hidden">
+        <div className="Dateandtime hover:text-yellow-300 text-[12px] font-semibold lg:inline hidden">
           <p onClick={() => navigate("/aboutus")}>About US</p>
         </div>{" "}
-        <div className="Dateandtime text-sm font-semibold lg:inline hidden">
+        <div className="Dateandtime hover:text-yellow-300 text-[12px] font-semibold lg:inline hidden">
           <p onClick={() => navigate("/blogs")}>Blogs</p>
         </div>{" "}
-        <div className="Dateandtime text-sm font-semibold lg:inline hidden">
+        <div className="Dateandtime hover:text-yellow-300 text-[12px] font-semibold lg:inline hidden">
           <p onClick={() => navigate("/contactus")}>Contact US</p>
         </div>
       </div>

@@ -1,9 +1,11 @@
 import React from "react";
 import Banner from "../Banner";
 import { images } from "../../Assets";
+import Footer from "../Footer/Footer";
 
 const Blogs = () => {
   return (
+   <>
     <div className="p-5 ">
       <Banner name="Blogs" image={images.blogs} />
       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 place-items-center">
@@ -122,6 +124,8 @@ const Blogs = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+   </>
   );
 };
 

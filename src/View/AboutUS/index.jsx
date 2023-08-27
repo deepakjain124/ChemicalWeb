@@ -1,11 +1,13 @@
 import React from "react";
 import Banner from "../Banner";
 import { images } from "../../Assets";
+import Footer from "../Footer/Footer";
 
 const AboutUS = () => {
   return (
+    <>
     <div className="p-5 " >
-      <Banner name="About Us" image={images.aboutus}/>
+      <Banner name="About Us"/>
       <div className="grid mt-14 grid-cols-1 md:grid-cols-2 place-items-center">
         <div className="flex flex-wrap  justify-center gap-8 items-center">
           <div className="border-2 shadow shadow-gray-300 border-gray-400  flex flex-col justify-center items-center p-10">
@@ -14,11 +16,11 @@ const AboutUS = () => {
           </div>
           <div className="leading-8">
             <p className="text-primary">INTRODCTION OF US</p>
-            <p className="font-extrabold text-xl md:text-3xl">HI-TECH MINERALS</p>
-            <p className="font-extrabold text-xl md:text-3xl">& CHEMICALS</p>
+            <p className="font-extrabold text-xl md:text-2xl">2-MICRONS MINERALS</p>
+            <p className="font-extrabold text-xl md:text-2xl">& CHEMICALS</p>
           </div>
         </div>
-        <div className="w-3/6 mt-4 md:mt-0 text-justify text-gray-500">
+        <div className="w-full md:w-3/6 text-[15px] leading-7 mt-4 md:mt-0 text-justify text-gray-500">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -30,7 +32,7 @@ const AboutUS = () => {
       <div className=" mt-12 shadow-lg rounded-md shadow-gray-300 p-8 gap-4 grid grid-cols-1 lg:grid-cols-2 place-items-start">
         <div className="p-4 order-2">
           <h1 className="text-2xl font-bold">About Us</h1>
-          <p className="text-justify text-sm md:text-lg w-full lg:w-4/5 mt-4">
+          <p className="text-justify text-sm md:text-[15px] leading-6 md:leading-8 w-full lg:w-4/5 mt-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -43,13 +45,13 @@ const AboutUS = () => {
           </p>
         </div>
         <div className="w-full h-72 md:h-80 order-1 md:order-2">
-          <img src={images.contactbg} alt="about" className="w-full h-full" />
+          <img src={images.aboutusside} alt="about" className="w-full h-full" />
         </div>
       </div>
       <div className=" mt-12 shadow-lg rounded-md shadow-gray-300 p-8 gap-4 grid grid-cols-1 lg:grid-cols-2 place-items-start">
         <div className="p-4 order-2">
           <h1 className="text-2xl font-bold">Company Policy</h1>
-          <p className="text-justify text-sm md:text-lg w-full lg:w-4/5 mt-4">
+          <p className="text-justify text-sm md:text-[15px] leading-6 md:leading-8 w-full lg:w-4/5 mt-4">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -62,10 +64,12 @@ const AboutUS = () => {
           </p>
         </div>
         <div className="w-full h-72 md:h-80 order-1 md:order-2">
-          <img src={images.contactbg} alt="about" className="w-full h-full" />
+          <img src={images.policy} alt="about" className="w-full h-full" />
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
